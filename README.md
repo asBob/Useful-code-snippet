@@ -1,3 +1,167 @@
 # Useful-code-snippet
 持续更新一些有用的代码段
 保持学习 
+
+//es6快速代码去重 
+let arr = [...new Set([1,1,2,2,3,4,1])]
+
+
+
+
+
+
+
+//css实现p标签限制行数超出省略
+p{ display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp:3; overflow:hidden; }
+
+
+
+
+
+
+
+
+//便利传递参数
+for (var i = 0; i < jinggai.length; i++) {
+    var ul = $("<ul>", {class: "jgRow", id: "row_" + i});
+
+    ul.click(function () {
+        var index = parseInt(this.id.split("_")[1]);
+        transIndex(index);
+    });
+  ...
+  ...
+}
+function  transIndex(index){
+  $(".dizhi").text(jinggai[index].jposition);
+}
+  
+  
+  
+  
+  
+  
+  
+  
+//高度跟随页面高度
+$("#charMap").css("height",window.innerHeight);
+  
+//h5页面自适应宽度（不过现在多半用rem了）
+<meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.3, maximum-scale=2.0, user-scalable=no" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+  
+//修改谷歌输入框默认记住密码后颜色 
+input:-webkit-autofill , textarea:-webkit-autofill, select:-webkit-autofill {
+    -webkit-text-fill-color: #ededed !important;
+    -webkit-box-shadow: 0 0 0px 1000px transparent  inset !important;
+    background-color:transparent;
+    background-image: none;
+    transition: background-color 50000s ease-in-out 0s; //背景色透明  生效时长  过渡效果  启用时延迟的时间
+}
+
+  
+  
+  
+  
+  
+  
+  
+//取消双击文字选中
+//在body标签添加
+onselectstart="return false;" style="-moz-user-select:none;
+  
+  
+  
+  
+  
+  
+  
+  
+//适应各种屏幕及手机的rem
+(function() {
+  document.addEventListener("DOMContentLoaded", function() {
+    var html = document.documentElement;
+    var windowwidth = html.clientWidth;
+    html.style.fontSize = windowwidth / 19.2 + "px";
+  });
+})();
+  
+  
+  
+  
+  
+  
+  
+  
+  
+//冒泡排序
+function bubbleSort(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = 0; j < arr.length - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        var temp = arr[j];	
+        arr[j] = arr[j + 1];		
+        arr[j + 1] = temp;		
+      }	
+    }	
+  }
+ }
+var arr = [12, 4, 9, 21, 43, 3];
+bubbleSort(arr);
+  
+  
+  
+  
+  
+  
+//证明自己nb
+console.log(([][[]]+[])[+!![]]+([]+{})[!+[]+!![]])
+  
+  
+  
+  
+  
+//论优雅的取整
+var a = ~~2.33
+var b= 2.33 | 0
+var c= 2.33 >> 0
+//论如何最佳的让两个整数交换数值
+var a=1,b=2;
+a += b;
+b = a - b;
+a -= b;
+//缺点也很明显，整型数据溢出，对于32位字符最大表示数字是2147483647，如果是2147483645和2147483646交换就失败了。
+//黑科技办法:
+a ^= b;
+b ^= a;
+a ^= b;
+  
+  
+  
+  
+  
+  
+ 
+  <!--
+  ━━━━━━神兽出没━━━━━━
+  　　　┏┓　　　┏┓
+  　　┏┛┻━━━┛┻┓
+  　　┃　　　　　　　┃
+  　　┃　　　━　　　┃
+  　　┃　┳┛　┗┳　┃
+  　　┃　　　　　　　┃
+  　　┃　　　┻　　　┃
+  　　┃　　　　　　　┃
+  　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
+  　　　　┃　　　┃    神兽保佑,代码无bug
+  　　　　┃　　　┃
+  　　　　┃　　　┗━━━┓
+  　　　　┃　　　　　　　┣┓
+  　　　　┃　　　　　　　┏┛
+  　　　　┗┓┓┏━┳┓┏┛
+  　　　　　┃┫┫　┃┫┫
+  　　　　　┗┻┛　┗┻┛
+  ━━━━━━感觉萌萌哒━━━━━━
+ -->
