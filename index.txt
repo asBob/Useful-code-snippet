@@ -42,11 +42,20 @@ function  transIndex(index){
 //高度跟随页面高度
 $("#charMap").css("height",window.innerHeight);
   
+  
+  
+  
+  
 //h5页面自适应宽度（不过现在多半用rem了）
 <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.3, maximum-scale=2.0, user-scalable=no" />
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <meta content="telephone=no" name="format-detection" />
+  
+  
+  
+  
+  
   
 //修改谷歌输入框默认记住密码后颜色 
 input:-webkit-autofill , textarea:-webkit-autofill, select:-webkit-autofill {
